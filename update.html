@@ -301,6 +301,110 @@
             opacity: 0.7;
         }
 
+        /* Installation Guide CSS */
+        .install-guide {
+            margin-top: 5rem;
+            width: 100%;
+            padding: 3rem;
+            background: rgba(26, 19, 43, 0.4);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .install-guide h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .guide-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        .method-container {
+            margin-bottom: 4rem;
+        }
+        .method-container:last-child {
+            margin-bottom: 0;
+        }
+        .method-title {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            text-align: left;
+        }
+        .steps-grid {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .step-card {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        .step-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            text-align: center;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        .step-text strong {
+            color: var(--primary-hover);
+            margin-left: 5px;
+        }
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .img-wrapper img {
+            width: 100%;
+            display: block;
+        }
+        .highlight-box {
+            position: absolute;
+            border: 3px solid #ff0055;
+            background: rgba(255, 0, 85, 0.25);
+            border-radius: 8px;
+            animation: flashBox 2s infinite;
+            pointer-events: none;
+        }
+        @keyframes flashBox {
+            0% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 0, 85, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 0, 85, 0); }
+        }
+        .method-note {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(155, 44, 250, 0.1);
+            border-radius: 12px;
+            color: #e2d1ff;
+            font-weight: 500;
+        }
+
         .features {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -400,6 +504,7 @@
             main { margin-top: 1rem; }
             .glow-1, .glow-2 { display: none; }
             .download-card { padding: 1.8rem; width: 95%; max-width: 100%; }
+            .install-guide { padding: 1.5rem; }
         }
         
         @media (max-width: 480px) {
@@ -446,10 +551,6 @@
                             <svg class="os-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503c-1.4362-.6581-3.0475-1.0286-4.7523-1.0286-1.7048 0-3.3161.3705-4.7523 1.0286l-2.0223-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.118-9.4396"/>
                             </svg>
-                            <!-- Apple Icon -->
-                            <svg class="os-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16.365 21.439c-1.043.743-2.115 1.487-3.313 1.487-1.155 0-1.602-.743-2.946-.743-1.38 0-1.865.706-2.946.706-1.198 0-2.385-.818-3.35-2.23C1.864 17.82 0 12.357 2.155 8.791c1.08-1.784 2.87-2.936 4.881-2.936 1.156 0 2.23.818 3.012.818.781 0 2.083-.892 3.458-.892 2.454 0 4.165 1.19 5.094 2.974-4.276 2.155-3.569 8.028.781 9.812-.966 2.527-2.008 3.531-3.016 4.872zM15.435 2.138A5.45 5.45 0 0 0 12.016 4a5.356 5.356 0 0 0 1.226 3.642c1.45 1.45 3.532 1.375 3.532 1.375a5.534 5.534 0 0 0-1.34-3.531 4.58 4.58 0 0 0-3.374-1.375"/>
-                            </svg>
                         </div>
                     </div>
                 </div>
@@ -458,6 +559,61 @@
                     <img src="hero.png" alt="Casino Game Artwork">
                 </div>
             </div>
+
+            <!-- INSTALLATION GUIDE SECTION -->
+            <section class="install-guide">
+                <h2>Installation Guide</h2>
+                <p class="guide-subtitle">Having trouble installing? Google Play Protect occasionally blocks apps downloaded outside the Play Store. Follow these simple steps.</p>
+
+                <div class="method-container">
+                    <h3 class="method-title">Method 1: Quick Install (Recommended)</h3>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-text">1. Tap <strong>More details</strong></div>
+                            <div class="img-wrapper">
+                                <img src="img/q1.jpg" alt="Scan Recommended">
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-text">2. Tap <strong>Install without scanning</strong></div>
+                            <div class="img-wrapper">
+                                <img src="img/q2.jpg" alt="Install anyway">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="method-container">
+                    <h3 class="method-title">Method 2: Turn off Play Protect</h3>
+                    <div class="steps-grid">
+                        <div class="step-card">
+                            <div class="step-text">1. Open Play Store & tap <strong>Avatar</strong></div>
+                            <div class="img-wrapper">
+                                <img src="img/m1_1.jpg" alt="Avatar">
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-text">2. Tap <strong>Play Protect</strong></div>
+                            <div class="img-wrapper">
+                                <img src="img/m1_2.jpg" alt="Play Protect">
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-text">3. Toggle <strong>Scan apps</strong> off</div>
+                            <div class="img-wrapper">
+                                <img src="img/m1_3.jpg" alt="Settings Toggle">
+                            </div>
+                        </div>
+                        <div class="step-card">
+                            <div class="step-text">4. Tap <strong>Turn off</strong></div>
+                            <div class="img-wrapper">
+                                <img src="img/m1_4.jpg" alt="Confirm Turn off">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="method-note">After turning off Play Protect, you can safely install the app!</p>
+                </div>
+            </section>
 
             <div class="features">
                 <div class="feature-item">
