@@ -7,6 +7,10 @@
     <meta name="description" content="Download the latest version of the Trizo betting app! Enjoy smoother gameplay, enhanced security, and faster withdrawals.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         :root {
             --primary: #9b2cfa;
             --primary-hover: #b45bff;
@@ -75,31 +79,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
             position: absolute;
             top: 0;
             left: 0;
-            padding: 2rem;
+            padding: 1rem 2rem;
             z-index: 10;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
             object-fit: cover;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.1);
         }
 
         .brand-name {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: 1px;
             background: linear-gradient(to right, #fff, #d4bfff);
@@ -112,58 +115,39 @@
             flex-direction: column;
             align-items: center;
             width: 100%;
-            margin-top: 6rem;
+            margin-top: 3.5rem;
             animation: fadeIn 1s ease-out forwards;
         }
 
         .hero-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             width: 100%;
-            gap: 4rem;
+            text-align: center;
+            gap: 2rem;
         }
 
         .hero-content {
-            flex: 1;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            text-align: left;
-        }
-
-        .hero-image-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-image-container img {
+            align-items: center;
+            text-align: center;
             width: 100%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px rgba(155, 44, 250, 0.3);
-            animation: float 6s ease-in-out infinite;
-            object-fit: contain;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+            max-width: 800px;
         }
 
         .badge {
             background: rgba(155, 44, 250, 0.15);
             color: #d4bfff;
-            padding: 0.5rem 1.2rem;
+            padding: 0.4rem 1rem;
             border-radius: 50px;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             border: 1px solid rgba(155, 44, 250, 0.3);
             display: inline-block;
             box-shadow: 0 0 20px rgba(155, 44, 250, 0.1);
@@ -171,10 +155,10 @@
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+            line-height: 1.15;
+            margin-bottom: 1rem;
         }
 
         .highlight {
@@ -186,31 +170,32 @@
         .highlight::after {
             content: '';
             position: absolute;
-            bottom: 5px;
+            bottom: 3px;
             left: 0;
             width: 100%;
-            height: 15px;
+            height: 10px;
             background: rgba(255, 184, 0, 0.2);
             z-index: -1;
             transform: skew(-10deg);
         }
 
         p.subtitle {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: var(--text-muted);
-            margin-bottom: 3rem;
-            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
             max-width: 600px;
+            text-align: center;
         }
 
         .download-card {
             background: rgba(26, 19, 43, 0.6);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 24px;
-            padding: 2.5rem;
+            border-radius: 20px;
+            padding: 1.6rem;
             width: 100%;
-            max-width: 450px;
+            max-width: 420px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             transform: translateY(0);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -218,23 +203,23 @@
         }
 
         .download-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: 0 30px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(155, 44, 250, 0.2);
         }
 
         .update-title {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: #fff;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.4rem;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
 
         .update-desc {
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             color: var(--text-muted);
-            margin-bottom: 2rem;
-            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            line-height: 1.4;
         }
 
         .btn-download {
@@ -245,10 +230,10 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-hover));
             color: white;
             border: none;
-            padding: 1.2rem 2rem;
-            font-size: 1.2rem;
+            padding: 0.85rem 1.5rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            border-radius: 12px;
+            border-radius: 10px;
             width: 100%;
             cursor: pointer;
             text-decoration: none;
@@ -279,25 +264,25 @@
         }
 
         .btn-download svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             fill: currentColor;
             animation: bounce 2s infinite;
         }
 
         .os-support {
-            margin-top: 1.5rem;
+            margin-top: 0.8rem;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .os-icon {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             opacity: 0.7;
         }
 
@@ -308,19 +293,24 @@
             padding: 3rem;
             background: rgba(26, 19, 43, 0.4);
             border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid rgba(155, 44, 250, 0.25);
+            box-shadow: 0 15px 40px rgba(155, 44, 250, 0.15);
+            scroll-margin-top: 2rem;
         }
         .install-guide h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #d4bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .guide-subtitle {
             text-align: center;
             color: var(--text-muted);
             margin-bottom: 3rem;
             font-size: 1.1rem;
+            line-height: 1.6;
         }
         .method-container {
             margin-bottom: 4rem;
@@ -365,6 +355,7 @@
             min-height: 50px;
             display: flex;
             align-items: center;
+            line-height: 1.4;
         }
         .step-text strong {
             color: var(--primary-hover);
@@ -403,6 +394,80 @@
             border-radius: 12px;
             color: #e2d1ff;
             font-weight: 500;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px;
+            border-radius: 50px;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            padding: 0.6rem 1.8rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(155, 44, 250, 0.4);
+        }
+
+        /* Scroll Helper */
+        .scroll-helper {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 0.8rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            background: rgba(255, 184, 0, 0.07);
+            border: 1px solid rgba(255, 184, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .scroll-helper:hover {
+            background: rgba(255, 184, 0, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 184, 0, 0.1);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            animation: pulse-dot 1.5s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 184, 0, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(255, 184, 0, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 184, 0, 0); }
         }
 
         .features {
@@ -482,35 +547,39 @@
             .hero-section {
                 flex-direction: column;
                 text-align: center;
-                gap: 3rem;
+                gap: 1.5rem;
             }
             .hero-content {
                 align-items: center;
                 text-align: center;
             }
-            h1 { font-size: 3rem; margin-bottom: 1rem; }
+            h1 { font-size: 2.5rem; margin-bottom: 0.8rem; }
         }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-            .subtitle { font-size: 1rem; margin-bottom: 2rem; padding: 0 15px; }
-            .update-title { font-size: 1.6rem; }
-            .update-desc { font-size: 0.95rem; margin-bottom: 1.5rem; }
-            .btn-download { padding: 1.1rem 1.5rem; font-size: 1.1rem; }
-            .features { grid-template-columns: 1fr; gap: 1rem; margin-top: 2.5rem; width: 90%; margin-left: auto; margin-right: auto; }
-            .feature-item { padding: 1.2rem; }
-            .container { padding: 1rem; }
-            header { padding: 1rem; position: relative; justify-content: center; }
-            main { margin-top: 1rem; }
+            h1 { font-size: 2.1rem; margin-bottom: 0.6rem; }
+            .subtitle { font-size: 0.95rem; margin-bottom: 1.2rem; padding: 0 10px; }
+            .update-title { font-size: 1.3rem; }
+            .update-desc { font-size: 0.85rem; margin-bottom: 0.8rem; }
+            .btn-download { padding: 0.75rem 1.2rem; font-size: 0.95rem; }
+            .features { grid-template-columns: 1fr; gap: 0.8rem; margin-top: 2rem; width: 95%; margin-left: auto; margin-right: auto; }
+            .feature-item { padding: 1rem; }
+            .container { padding: 0.8rem; }
+            header { padding: 0.5rem 1rem; position: relative; justify-content: center; }
+            .logo-img { width: 35px; height: 35px; }
+            .brand-name { font-size: 1.3rem; }
+            main { margin-top: 0.5rem; }
             .glow-1, .glow-2 { display: none; }
-            .download-card { padding: 1.8rem; width: 95%; max-width: 100%; }
-            .install-guide { padding: 1.5rem; }
+            .download-card { padding: 1.2rem; width: 100%; max-width: 100%; }
+            .install-guide { padding: 1.2rem; margin-top: 3rem; }
+            .steps-grid { gap: 1.2rem; }
+            .step-card { max-width: 100%; }
         }
         
         @media (max-width: 480px) {
-            h1 { font-size: 2.1rem; }
-            .btn-download { padding: 1rem; font-size: 1rem; }
-            .download-card { padding: 1.5rem; width: 100%; }
+            h1 { font-size: 1.9rem; }
+            .btn-download { padding: 0.7rem 1rem; font-size: 0.9rem; }
+            .download-card { padding: 1rem; width: 100%; }
             .features { width: 100%; }
         }
     </style>
@@ -552,68 +621,155 @@
                                 <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993s-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 0 0-.1521-.5676.416.416 0 0 0-.5676.1521l-2.0223 3.503c-1.4362-.6581-3.0475-1.0286-4.7523-1.0286-1.7048 0-3.3161.3705-4.7523 1.0286l-2.0223-3.503a.416.416 0 0 0-.5676-.1521.416.416 0 0 0-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.118-9.4396"/>
                             </svg>
                         </div>
+                        
+                        <!-- Scroll helper to installation guide -->
+                        <a href="#install-guide" class="scroll-helper">
+                            <span class="pulse-dot"></span>
+                            Having trouble installing? View Guide (गाइड देखें)
+                        </a>
                     </div>
-                </div>
-
-                <div class="hero-image-container">
-                    <img src="hero.png" alt="Casino Game Artwork">
                 </div>
             </div>
 
             <!-- INSTALLATION GUIDE SECTION -->
-            <section class="install-guide">
-                <h2>Installation Guide</h2>
-                <p class="guide-subtitle">Having trouble installing? Google Play Protect occasionally blocks apps downloaded outside the Play Store. Follow these simple steps.</p>
+            <section class="install-guide" id="install-guide">
+                <h2>Installation Guide / इंस्टॉलेशन गाइड</h2>
+                
+                <!-- Language Switcher Tab -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" id="btn-en" onclick="switchLanguage('en')">English</button>
+                    <button class="lang-btn" id="btn-hi" onclick="switchLanguage('hi')">हिन्दी (Hindi)</button>
+                </div>
 
-                <div class="method-container">
-                    <h3 class="method-title">Method 1: Quick Install (Recommended)</h3>
-                    <div class="steps-grid">
-                        <div class="step-card">
-                            <div class="step-text">1. Tap <strong>More details</strong></div>
-                            <div class="img-wrapper">
-                                <img src="img/q9.jpeg" alt="Scan Recommended">
+                <!-- English Instructions -->
+                <div id="guide-en" class="guide-content">
+                    <p class="guide-subtitle">Having trouble installing? Google Play Protect occasionally blocks apps downloaded outside the Play Store. Follow these simple steps.</p>
+
+                    <div class="method-container">
+                        <h3 class="method-title">Method 1: Quick Install (Recommended)</h3>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-text">1. Tap <strong>More details</strong></div>
+                                <div class="img-wrapper">
+                                    <img src="img/q9.jpeg" alt="Scan Recommended">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">2. Tap <strong>Install without scanning</strong></div>
+                                <div class="img-wrapper">
+                                    <img src="img/q2.jpg" alt="Install anyway">
+                                </div>
                             </div>
                         </div>
-                        <div class="step-card">
-                            <div class="step-text">2. Tap <strong>Install without scanning</strong></div>
-                            <div class="img-wrapper">
-                                <img src="img/q2.jpg" alt="Install anyway">
+                    </div>
+
+                    <div class="method-container">
+                        <h3 class="method-title">Method 2: Turn off Play Protect</h3>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-text">1. Open Play Store & tap <strong>Avatar</strong></div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_1.jpg" alt="Avatar">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">2. Tap <strong>Play Protect</strong></div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_2.jpg" alt="Play Protect">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">3. Toggle <strong>Scan apps</strong> off</div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_3.jpg" alt="Settings Toggle">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">4. Tap <strong>Turn off</strong></div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_4.jpg" alt="Confirm Turn off">
+                                </div>
                             </div>
                         </div>
+                        <p class="method-note">After turning off Play Protect, you can safely install the app!</p>
                     </div>
                 </div>
 
-                <div class="method-container">
-                    <h3 class="method-title">Method 2: Turn off Play Protect</h3>
-                    <div class="steps-grid">
-                        <div class="step-card">
-                            <div class="step-text">1. Open Play Store & tap <strong>Avatar</strong></div>
-                            <div class="img-wrapper">
-                                <img src="img/m1_1.jpg" alt="Avatar">
+                <!-- Hindi Instructions -->
+                <div id="guide-hi" class="guide-content" style="display: none;">
+                    <p class="guide-subtitle">क्या आपको ऐप इंस्टॉल करने में परेशानी हो रही है? Google Play Protect कभी-कभी प्ले स्टोर के बाहर से डाउनलोड किए गए ऐप्स को ब्लॉक कर देता है। इन आसान स्टेप्स को फॉलो करें।</p>
+
+                    <div class="method-container">
+                        <h3 class="method-title">तरीका 1: त्वरित इंस्टॉल (अनुशंसित)</h3>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-text">1. <strong>More details</strong> (अधिक विवरण) पर टैप करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/q9.jpeg" alt="Scan Recommended">
+                                </div>
                             </div>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-text">2. Tap <strong>Play Protect</strong></div>
-                            <div class="img-wrapper">
-                                <img src="img/m1_2.jpg" alt="Play Protect">
-                            </div>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-text">3. Toggle <strong>Scan apps</strong> off</div>
-                            <div class="img-wrapper">
-                                <img src="img/m1_3.jpg" alt="Settings Toggle">
-                            </div>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-text">4. Tap <strong>Turn off</strong></div>
-                            <div class="img-wrapper">
-                                <img src="img/m1_4.jpg" alt="Confirm Turn off">
+                            <div class="step-card">
+                                <div class="step-text">2. <strong>Install without scanning</strong> (बिना स्कैन किए इंस्टॉल करें) पर टैप करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/q2.jpg" alt="Install anyway">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p class="method-note">After turning off Play Protect, you can safely install the app!</p>
+
+                    <div class="method-container">
+                        <h3 class="method-title">तरीका 2: Play Protect को बंद करें</h3>
+                        <div class="steps-grid">
+                            <div class="step-card">
+                                <div class="step-text">1. Play Store खोलें और अपने <strong>प्रोफ़ाइल आइकन (Avatar)</strong> पर टैप करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_1.jpg" alt="Avatar">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">2. <strong>Play Protect</strong> पर टैप करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_2.jpg" alt="Play Protect">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">3. <strong>Scan apps with Play Protect</strong> को बंद (Toggle Off) करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_3.jpg" alt="Settings Toggle">
+                                </div>
+                            </div>
+                            <div class="step-card">
+                                <div class="step-text">4. <strong>Turn off</strong> (बंद करें) पर टैप करें</div>
+                                <div class="img-wrapper">
+                                    <img src="img/m1_4.jpg" alt="Confirm Turn off">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="method-note">Play Protect बंद करने के बाद, आप सुरक्षित रूप से ऐप इंस्टॉल कर सकते हैं!</p>
+                    </div>
                 </div>
             </section>
+
+            <script>
+                function switchLanguage(lang) {
+                    const enContent = document.getElementById('guide-en');
+                    const hiContent = document.getElementById('guide-hi');
+                    const btnEn = document.getElementById('btn-en');
+                    const btnHi = document.getElementById('btn-hi');
+                    
+                    if (lang === 'hi') {
+                        enContent.style.display = 'none';
+                        hiContent.style.display = 'block';
+                        btnEn.classList.remove('active');
+                        btnHi.classList.add('active');
+                    } else {
+                        enContent.style.display = 'block';
+                        hiContent.style.display = 'none';
+                        btnEn.classList.add('active');
+                        btnHi.classList.remove('active');
+                    }
+                }
+            </script>
 
             <div class="features">
                 <div class="feature-item">
